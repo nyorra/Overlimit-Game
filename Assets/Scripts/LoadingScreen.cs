@@ -13,10 +13,10 @@ namespace OVERLIMIT.Loading
     {
         public Slider LoadingProgressBar;
         public TMP_Text ContinueHintText;
-        public SceneType nextScene = SceneType.MainMenu; 
+        public SceneType nextScene = SceneType.MainMenu;
 
         void Start()
-        {   
+        {
             // проверка на подключение slider и continueText
             if (LoadingProgressBar == null || ContinueHintText == null)
             {
@@ -29,7 +29,7 @@ namespace OVERLIMIT.Loading
             LoadingProgressBar.value = 0f;
 
             StartCoroutine(LoadProcess());
-            
+
             // Здесь используем context (this), чтобы при клике на лог сразу найти этот объект на сцене
             OverLogger.LogSuccess("Loading process initialized.", this);
         }
@@ -37,9 +37,9 @@ namespace OVERLIMIT.Loading
         IEnumerator LoadProcess()
         {
             // Используем название сцены из переменной, чтобы избежать опечаток в строках
-            string sceneName = nextScene.ToString(); 
+            string sceneName = nextScene.ToString();
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-            
+
             if (asyncLoad == null)
             {
                 OverLogger.LogError($"Failed to start loading scene: {sceneName}");
@@ -57,11 +57,11 @@ namespace OVERLIMIT.Loading
             LoadingProgressBar.value = 1f;
             LoadingProgressBar.gameObject.SetActive(false);
             ContinueHintText.gameObject.SetActive(true);
-            
+
             // Лог уровня Success для подтверждения, что ресурсы в памяти и мы ждем только игрока
             OverLogger.LogSuccess($"Scene '{sceneName}' pre-loaded. Waiting for user input...");
 
-            yield return new WaitUntil(() => 
+            yield return new WaitUntil(() =>
                 (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame) ||
                 (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame));
 
@@ -69,6 +69,7 @@ namespace OVERLIMIT.Loading
             // что проблема именно в инициализации новой сцены (Start методы новых скриптов)
             OverLogger.LogSuccess($"Activating scene: {sceneName}");
             asyncLoad.allowSceneActivation = true;
+            OverLogger.ClearConsole();
         }
     }
 }
