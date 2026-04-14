@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147822208}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: Panel_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297687821}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Panel_Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 305397231}
   - component: {fileID: 305397230}
   m_Layer: 5
-  m_Name: Garage_Btn
+  m_Name: GarageButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 320292969}
   - component: {fileID: 320292968}
   m_Layer: 5
-  m_Name: SelectedCar
+  m_Name: SelectedCarText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 330464382}
   - component: {fileID: 330464381}
   m_Layer: 5
-  m_Name: Credits_bg
+  m_Name: CreditsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 440916574}
   - component: {fileID: 440916573}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 647651773}
   - component: {fileID: 647651774}
   m_Layer: 5
-  m_Name: Garage
+  m_Name: Panel_Garage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 703920520}
   - component: {fileID: 703920519}
   m_Layer: 5
-  m_Name: BackToMain_Btn
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 773217939}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 718410493}
   - component: {fileID: 718410492}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CreditsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,9 +1153,11 @@ GameObject:
   - component: {fileID: 773217937}
   - component: {fileID: 773217936}
   - component: {fileID: 773217935}
+  - component: {fileID: 773217941}
+  - component: {fileID: 773217940}
   - component: {fileID: 773217939}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI_MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,18 +1258,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 773217934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca8b1cef64aa6945af0ca8bd81d86db, type: 3}
+  m_Script: {fileID: 11500000, guid: 62b30b9303f42f7469af8d759d53ed21, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  nextScene: 2
-  ToCityButton: {fileID: 1777365106}
-  GarageButton: {fileID: 305397230}
-  SettingsButton: {fileID: 2045960557}
-  CreditsButton: {fileID: 1046648492}
-  MainScreenPanel: {fileID: 147822208}
-  GarageScreenPanel: {fileID: 647651773}
-  SettingsScreenPanel: {fileID: 297687821}
-  CreditsScreenPanel: {fileID: 1707809394}
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Menu.MainMenuNavigation
+  mainScreenPanel: {fileID: 147822208}
+  garageScreenPanel: {fileID: 647651773}
+  settingsScreenPanel: {fileID: 297687821}
+  creditsScreenPanel: {fileID: 1707809394}
+--- !u!114 &773217940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773217934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f64f70ffb5d43348bc528563263f332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Menu.MainMenuLoader
+--- !u!114 &773217941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773217934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5f3f06a6350904fbc40843a9b4199e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Menu.MainMenuController
+  nextScene: 0
+  navigation: {fileID: 773217939}
+  loader: {fileID: 773217940}
+  toCityButton: {fileID: 1777365106}
+  garageButton: {fileID: 305397230}
+  settingsButton: {fileID: 2045960557}
+  creditsButton: {fileID: 1046648492}
+  backButtons:
+  - {fileID: 1930789682}
+  - {fileID: 1253108621}
+  - {fileID: 703920519}
 --- !u!1 &779891833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1312,7 @@ GameObject:
   - component: {fileID: 779891836}
   - component: {fileID: 779891835}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,7 +1449,7 @@ GameObject:
   - component: {fileID: 925314496}
   - component: {fileID: 925314495}
   m_Layer: 5
-  m_Name: Settings_bg
+  m_Name: SettingsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1492,7 +1524,7 @@ GameObject:
   - component: {fileID: 993429900}
   - component: {fileID: 993429899}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NextText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1630,7 +1662,7 @@ GameObject:
   - component: {fileID: 1046648493}
   - component: {fileID: 1046648492}
   m_Layer: 5
-  m_Name: Credits_Btn
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1751,7 +1783,7 @@ GameObject:
   - component: {fileID: 1253108622}
   - component: {fileID: 1253108621}
   m_Layer: 5
-  m_Name: BackToMain_Btn
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1821,7 +1853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 773217939}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -1883,7 +1915,7 @@ GameObject:
   - component: {fileID: 1255465304}
   - component: {fileID: 1255465303}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PrevText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2020,7 +2052,7 @@ GameObject:
   - component: {fileID: 1401944697}
   - component: {fileID: 1401944696}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SettingsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2157,7 +2189,7 @@ GameObject:
   - component: {fileID: 1417532225}
   - component: {fileID: 1417532224}
   m_Layer: 5
-  m_Name: Menu_Bg
+  m_Name: MenuBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2232,7 +2264,7 @@ GameObject:
   - component: {fileID: 1527482101}
   - component: {fileID: 1527482100}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2370,7 +2402,7 @@ GameObject:
   - component: {fileID: 1609762786}
   - component: {fileID: 1609762789}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2507,7 +2539,7 @@ GameObject:
   - component: {fileID: 1663681556}
   - component: {fileID: 1663681555}
   m_Layer: 5
-  m_Name: PrevCar
+  m_Name: PreviousCarButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2625,7 +2657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707809394}
   m_Layer: 5
-  m_Name: Credits
+  m_Name: Panel_Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2665,7 +2697,7 @@ GameObject:
   - component: {fileID: 1777365107}
   - component: {fileID: 1777365106}
   m_Layer: 5
-  m_Name: ToCity_Btn
+  m_Name: ToCityButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2865,7 +2897,7 @@ GameObject:
   - component: {fileID: 1930789683}
   - component: {fileID: 1930789682}
   m_Layer: 5
-  m_Name: BackToMain_Btn
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2935,7 +2967,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 773217939}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -2997,7 +3029,7 @@ GameObject:
   - component: {fileID: 1954694313}
   - component: {fileID: 1954694312}
   m_Layer: 5
-  m_Name: Garage_bg
+  m_Name: GarageBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3072,7 +3104,7 @@ GameObject:
   - component: {fileID: 1978570477}
   - component: {fileID: 1978570476}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ToCityText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3209,7 +3241,7 @@ GameObject:
   - component: {fileID: 2024431996}
   - component: {fileID: 2024431995}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GarageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3347,7 +3379,7 @@ GameObject:
   - component: {fileID: 2045960558}
   - component: {fileID: 2045960557}
   m_Layer: 5
-  m_Name: Settings_Btn
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3468,7 +3500,7 @@ GameObject:
   - component: {fileID: 2126810209}
   - component: {fileID: 2126810208}
   m_Layer: 5
-  m_Name: NextCar
+  m_Name: NextCarButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

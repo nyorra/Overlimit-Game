@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   m_Layer: 0
-  m_Name: Loading_camera
+  m_Name: LoadingCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,9 +523,10 @@ GameObject:
   - component: {fileID: 947482706}
   - component: {fileID: 947482705}
   - component: {fileID: 947482704}
+  - component: {fileID: 947482709}
   - component: {fileID: 947482708}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: 'UI_LoadingScreen '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,12 +626,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 947482703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311766f12fb886d418e46ea29c8acaee, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e0fb3c98de7a384faa161be4eb9452c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Loading
-  LoadingProgressBar: {fileID: 1996807574}
-  ContinueHintText: {fileID: 1862862553}
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingUI
+  loadingProgressBar: {fileID: 1996807574}
+  continueHintText: {fileID: 1862862553}
+--- !u!114 &947482709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947482703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324fd702e1b7d484b87c3b161d1b7839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingScreen
   nextScene: 1
+  ui: {fileID: 947482708}
 --- !u!1 &1166038705
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +732,7 @@ GameObject:
   - component: {fileID: 1325416375}
   - component: {fileID: 1325416374}
   m_Layer: 5
-  m_Name: Loading_screen
+  m_Name: LoadingScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,7 +882,7 @@ GameObject:
   - component: {fileID: 1862862554}
   - component: {fileID: 1862862553}
   m_Layer: 5
-  m_Name: continueText
+  m_Name: ContinueHintText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,7 +1055,7 @@ GameObject:
   - component: {fileID: 1996807573}
   - component: {fileID: 1996807574}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: LoadingProgressBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
