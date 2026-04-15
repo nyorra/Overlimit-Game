@@ -590,7 +590,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -626,11 +626,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 947482703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ea9bc65de300e44d8e35bcf4e95ed83, type: 3}
+  m_Script: {fileID: 11500000, guid: 463b31c9de2ed4a429779d8e749a25f7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingController
-  nextScene: 1
-  ui: {fileID: 947482709}
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingView
+  loadingProgressBar: {fileID: 1996807574}
+  continueHintText: {fileID: 1862862553}
 --- !u!114 &947482709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,11 +640,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 947482703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e0fb3c98de7a384faa161be4eb9452c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54d8a2cbcbeb86b4cb2ab0eac1003e36, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingUI
-  loadingProgressBar: {fileID: 1996807574}
-  continueHintText: {fileID: 1862862553}
+  m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Loading.LoadingController
+  nextScene: 1
+  ui: {fileID: 947482708}
 --- !u!1 &1166038705
 GameObject:
   m_ObjectHideFlags: 0

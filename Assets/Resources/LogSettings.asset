@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35c207b6d967bd84fa6c9038ce425362, type: 3}
+  m_Script: {fileID: 11500000, guid: c055c41a5037e7c41b81a60fac5900d8, type: 3}
   m_Name: LogSettings
   m_EditorClassIdentifier: Assembly-CSharp::OVERLIMIT.Logging.LogSettings
   MinimumLevel: 1
